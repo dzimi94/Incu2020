@@ -1,0 +1,27 @@
+# REQUEST FOR TASK 2
+GET http://localhost:5000/mastodon/interfaces.json
+Content-Type: application/json
+###
+
+# REQUESTS FOR TASK 4
+GET http://localhost:5000/mastodon/int_GigabitEthernet1/0/5/details.json
+Content-Type: application/json
+###
+
+GET http://localhost:5000/bru-dna-1/int_g1/0/details.json
+Content-Type: application/json
+###
+
+# REQUEST FOR TASK 5
+PATCH http://localhost:5000/mastodon/5e7a7b2f3c0b32a8769f9db9
+Content-Type: application/json
+
+{"Description": "my cool interface"}
+###
+
+# REQUEST FOR TASK 6
+PATCH http://localhost:5000/mastodon/5e7a7b2f3c0b32a8769f9db9
+Content-Type: application/json
+
+{"State": "up"}
+###
