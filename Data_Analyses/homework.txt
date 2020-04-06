@@ -1,0 +1,17 @@
+
+#Exercise 1: Show all the rows in df_apps with Rating less than 4
+df_apps.loc[df_apps.Rating < 4]
+
+#Exercise 2: Drop "Android Ver" and "Genres" column
+df_apps = df_apps.drop("Android Ver", axis=1)
+df_apps = df_apps.drop("Genres", axis=1)
+
+#Exercise 3: Write some python code that prints the number of unique values for each column
+for x in df_apps.columns:
+    print(x + ": " + str(df_apps[x].nunique())) 
+
+#Exercise 4: Try to plot the below chart using only df_apps dataframe and in 2 lines of code.
+df_apps = df_apps.drop(10472).reset_index().drop("index", axis=1)
+ax1 = df_apps[['Category','Rating']].groupby('Category').mean().sort_values("Rating").plot(kind='bar', figsize=(10,5)).set_ylim(3.5,5)
+
+
